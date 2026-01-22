@@ -5,7 +5,8 @@ camera.position.z = 80;
 const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setClearColor(0x000000, 0);
-document.getElementById('particle-container').appendChild(renderer.domElement);
+const particleContainer = document.getElementById('particle-container');
+particleContainer.appendChild(renderer.domElement);
 
 // malla inicial
 const gridX = 120;
@@ -172,22 +173,21 @@ window.addEventListener('mousemove', (e) => {
   updateMousePosition(e.clientX, e.clientY);
 });
 
-// Eventos táctiles (móvil y tablets)
-window.addEventListener('touchstart', (e) => {
+// Eventos táctiles (móvil y tablets) - capturados en el documento completo
+document.addEventListener('touchstart', (e) => {
   if (e.touches.length > 0) {
     updateMousePosition(e.touches[0].clientX, e.touches[0].clientY);
   }
 }, { passive: true });
 
-window.addEventListener('touchmove', (e) => {
+document.addEventListener('touchmove', (e) => {
   if (e.touches.length > 0) {
     updateMousePosition(e.touches[0].clientX, e.touches[0].clientY);
   }
 }, { passive: true });
 
-window.addEventListener('touchend', () => {
-  // Opcional: puedes hacer que el efecto se detenga cuando se levanta el dedo
-  // o dejarlo como está para que continúe con el último movimiento
+document.addEventListener('touchend', () => {
+  // Las partículas seguirán moviéndose con el último impulso
 });
 
 window.addEventListener('resize', () => {
