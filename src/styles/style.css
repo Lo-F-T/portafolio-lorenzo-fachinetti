@@ -94,6 +94,7 @@ header{
 
 #gallery-container {
   position: sticky;
+  z-index: 11;
   top: 7rem;
   left:0;
   right:0;

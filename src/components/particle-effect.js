@@ -15,8 +15,8 @@ const spacing = 1.5;
 
 let currentCategory = 'TODOS';
 const positions = new Float32Array(particleCount * 3);
-const originalPositions = new Float32Array(particleCount * 3); // Posición actual de referencia
-const targetPositions = new Float32Array(particleCount * 3);   // Destino final de la categoría
+const originalPositions = new Float32Array(particleCount * 3);
+const targetPositions = new Float32Array(particleCount * 3);
 const velocities = new Float32Array(particleCount * 3);
 const mouse = { x: 0, y: 0, prevX: 0, prevY: 0 };
 
@@ -159,14 +159,40 @@ document.addEventListener('categoryChanged', (e) => {
   updateTargetPositions();
 });
 
+// Función para actualizar la posición del mouse (compartida por mouse y touch)
+function updateMousePosition(clientX, clientY) {
+  mouse.prevX = mouse.x;
+  mouse.prevY = mouse.y;
+  mouse.x = (clientX / window.innerWidth) * 2 - 1;
+  mouse.y = -(clientY / window.innerHeight) * 2 + 1;
+}
+
+// Eventos de mouse (desktop)
 window.addEventListener('mousemove', (e) => {
-  mouse.prevX = mouse.x; mouse.prevY = mouse.y;
-  mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
-  mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
+  updateMousePosition(e.clientX, e.clientY);
+});
+
+// Eventos táctiles (móvil y tablets)
+window.addEventListener('touchstart', (e) => {
+  if (e.touches.length > 0) {
+    updateMousePosition(e.touches[0].clientX, e.touches[0].clientY);
+  }
+}, { passive: true });
+
+window.addEventListener('touchmove', (e) => {
+  if (e.touches.length > 0) {
+    updateMousePosition(e.touches[0].clientX, e.touches[0].clientY);
+  }
+}, { passive: true });
+
+window.addEventListener('touchend', () => {
+  // Opcional: puedes hacer que el efecto se detenga cuando se levanta el dedo
+  // o dejarlo como está para que continúe con el último movimiento
 });
 
 window.addEventListener('resize', () => {
-  camera.aspect = window.innerWidth / window.innerHeight; camera.updateProjectionMatrix();
+  camera.aspect = window.innerWidth / window.innerHeight; 
+  camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
 });
 
