@@ -18,7 +18,7 @@ class PortfolioGallery {
 
   async loadProjects() {
     try {
-      const response = await fetch('../src/data/projects.json');
+      const response = await fetch('./src/data/projects.json');
       this.projects = await response.json();
     } catch (error) {
       console.error('Error cargando proyectos:', error);

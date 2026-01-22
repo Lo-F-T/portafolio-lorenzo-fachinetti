@@ -16,7 +16,7 @@ class CVPanel {
 
   async loadCVData() {
     try {
-      const response = await fetch('../src/data/cv.json');
+      const response = await fetch('./src/data/cv.json');
       this.cvData = await response.json();
     } catch (error) {
       console.error('Error cargando datos de CV:', error);
