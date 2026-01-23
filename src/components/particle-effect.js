@@ -8,6 +8,7 @@ renderer.setClearColor(0x000000, 0);
 const particleContainer = document.getElementById('particle-container');
 particleContainer.appendChild(renderer.domElement);
 
+
 // malla inicial
 const gridX = 120;
 const gridY = 80;
@@ -124,7 +125,7 @@ const material = new THREE.ShaderMaterial({
   uniforms: { uColor: { value: new THREE.Vector3(0.8, 0.8, 0.8) } },
   vertexShader: `attribute float size; void main() { vec4 mvPosition = modelViewMatrix * vec4(position, 1.0); gl_PointSize = size * (300.0 / -mvPosition.z); gl_Position = projectionMatrix * mvPosition; }`,
   fragmentShader: `uniform vec3 uColor; void main() { float dist = length(gl_PointCoord - vec2(0.5)); if (dist > 0.5) discard; gl_FragColor = vec4(uColor, (1.0 - (dist * 2.0)) * 0.7); }`,
-  transparent: true, blending: THREE.AdditiveBlending, depthWrite: false
+  transparent: true, blending: THREE.AdditiveBlending , depthWrite: false
 });
 
 const particles = new THREE.Points(geometry, material);
@@ -152,8 +153,22 @@ function updateColorsFromCSS() {
   const lCol = root.getPropertyValue('--line-color').trim();
   if (pCol) { const c = new THREE.Color(pCol); material.uniforms.uColor.value.set(c.r, c.g, c.b); }
   if (lCol) lineMaterial.color.set(lCol);
+  updateBlending();
+}
+
+function updateBlending() {
+  const root = getComputedStyle(document.documentElement);
+  const blendtype = parseInt(root.getPropertyValue('--btype').trim());
+  
+  if (!isNaN(blendtype)) {
+    material.blending = blendtype;
+    material.needsUpdate = true;
+    lineMaterial.blending = blendtype;
+    lineMaterial.needsUpdate = true;
+  }
 }
 setTimeout(updateColorsFromCSS, 100);
+document.addEventListener('themeChanged', updateColorsFromCSS);
 
 document.addEventListener('categoryChanged', (e) => {
   currentCategory = e.detail.category;
@@ -187,7 +202,6 @@ document.addEventListener('touchmove', (e) => {
 }, { passive: true });
 
 document.addEventListener('touchend', () => {
-  // Las partículas seguirán moviéndose con el último impulso
 });
 
 window.addEventListener('resize', () => {
