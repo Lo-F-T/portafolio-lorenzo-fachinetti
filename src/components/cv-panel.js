@@ -3,12 +3,14 @@ class CVPanel {
   constructor() {
     this.currentCategory = "TODOS";
     this.cvData = null;
+    this.isTransitioning = false;
     
     this.init();
   }
 
   async init() {
     await this.loadCVData();
+    this.setupContainer();
     this.render();
     this.attachEventListeners();
     console.log('CV Panel inicializado con categoría:', this.currentCategory);
@@ -24,25 +26,31 @@ class CVPanel {
     }
   }
 
+  setupContainer() {
+    const cvPanel = document.getElementById('cv-panel');
+    if (!cvPanel) {
+      console.error('No se encontró el contenedor cv-panel');
+      return;
+    }
+
+    // Crear estructura fija del contenedor
+    cvPanel.innerHTML = `
+      <div class="cv-content">
+        <div class="cv-inner"></div>
+      </div>
+    `;
+  }
+
   getCurrentCVData() {
     if (!this.cvData) return null;
     return this.cvData[this.currentCategory] || null;
   }
 
-  render() {
-    const cvContainer = document.getElementById('cv-panel');
-    if (!cvContainer) {
-      console.error('No se encontró el contenedor cv-panel');
-      return;
-    }
-
+  buildContent() {
     const data = this.getCurrentCVData();
     
-    console.log('Renderizando CV para categoría:', this.currentCategory, 'Datos:', data);
-    
     if (!data) {
-      cvContainer.innerHTML = '<div class="cv-empty">No hay información disponible</div>';
-      return;
+      return '<div class="cv-empty">No hay información disponible</div>';
     }
 
     let sectionsHTML = '';
@@ -56,7 +64,7 @@ class CVPanel {
       `;
     }
 
-    // Botón de descarga EDITAR
+    // Botón de descarga
     if (data.descargar) {
       sectionsHTML += `
         <div class="cv-section cv-download">
@@ -136,17 +144,80 @@ class CVPanel {
       `;
     }
 
-    cvContainer.innerHTML = `
-      <div class="cv-content">
-        ${sectionsHTML}
-      </div>
-    `;
+    return sectionsHTML;
   }
 
-  updateCategory(category) {
+  render(animated = false) {
+    const cvInner = document.querySelector('.cv-inner');
+    if (!cvInner) {
+      console.error('No se encontró el contenedor cv-inner');
+      return;
+    }
+
+    console.log('Renderizando CV para categoría:', this.currentCategory);
+    
+    const newContent = this.buildContent();
+
+    if (animated) {
+      // Fade out
+      cvInner.style.opacity = '0';
+      cvInner.style.transform = 'translateY(-15px)';
+      
+      setTimeout(() => {
+        cvInner.innerHTML = newContent;
+        
+        // Reset scroll position
+        const cvContent = document.querySelector('.cv-content');
+        if (cvContent) cvContent.scrollTop = 0;
+        
+        // Fade in
+        requestAnimationFrame(() => {
+          cvInner.style.opacity = '1';
+          cvInner.style.transform = 'translateY(0)';
+        });
+        
+        // Animar secciones individuales
+        setTimeout(() => {
+          this.animateItems(cvInner);
+        }, 50);
+      }, 300);
+    } else {
+      // Primera carga sin animación
+      cvInner.innerHTML = newContent;
+      
+      // Pequeño delay para primera animación
+      setTimeout(() => {
+        this.animateItems(cvInner);
+      }, 100);
+    }
+  }
+
+  animateItems(container) {
+    const sections = container.querySelectorAll('.cv-section');
+    
+    sections.forEach((section, index) => {
+      section.style.opacity = '0';
+      section.style.transform = 'translateX(-10px)';
+      
+      setTimeout(() => {
+        section.style.opacity = '1';
+        section.style.transform = 'translateX(0)';
+      }, index * 60);
+    });
+  }
+
+  async updateCategory(category) {
+    if (this.isTransitioning || category === this.currentCategory) return;
+    
     console.log('Actualizando CV a categoría:', category);
+    this.isTransitioning = true;
     this.currentCategory = category;
-    this.render();
+    
+    this.render(true);
+    
+    setTimeout(() => {
+      this.isTransitioning = false;
+    }, 700);
   }
 
   attachEventListeners() {
