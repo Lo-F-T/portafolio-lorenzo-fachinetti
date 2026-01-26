@@ -56,57 +56,72 @@ class GalleryDetails {
   }
 
   openDetailsPanel(project) {
-    const panel = document.getElementById('details-panel');
-    const gridContainer = document.getElementById('grid-container');
-    const detailsInner = document.getElementById('details-inner');
-    
-    if (!panel || !detailsInner) return;
+  const panel = document.getElementById('details-panel');
+  const gridContainer = document.getElementById('grid-container');
+  const detailsInner = document.getElementById('details-inner');
+  
+  if (!panel || !detailsInner) return;
 
-    const images = project.images || [];
-    detailsInner.innerHTML = `
-      <h2 class="detail-title">${project.title}</h2>
-      <div class="detail-tags">
-        ${project.categories.map(cat => `
-          <span class="detail-tag">${cat}</span>
-        `).join('')}
+  const images = project.images || [];
+  const newContent = `
+    <h2 class="detail-title">${project.title}</h2>
+    ${project.subtitle ? `<p class="detail-subtitle">${project.subtitle}</p>` : ''}
+    <div class="detail-tags">
+      ${project.categories.map(cat => `
+        <span class="detail-tag">${cat}</span>
+      `).join('')}
+    </div>
+    ${images.length > 0 ? `
+      <div class="carousel-container">
+        <div class="carousel-wrapper">
+          ${images.map((img, index) => `
+            <img src="${img}" 
+                 alt="${project.title}" 
+                 class="carousel-image ${index === 0 ? 'active' : ''}"
+                 data-index="${index}">
+          `).join('')}
+        </div>
+        <button class="carousel-btn prev" id="carousel-prev">‹</button>
+        <button class="carousel-btn next" id="carousel-next">›</button>
+        <div class="carousel-dots">
+          ${images.map((_, index) => `
+            <span class="carousel-dot ${index === 0 ? 'active' : ''}" data-index="${index}"></span>
+          `).join('')}
+        </div>
       </div>
-      ${images.length > 0 ? `
-        <div class="carousel-container">
-          <div class="carousel-wrapper">
-            ${images.map((img, index) => `
-              <img src="${img}" 
-                   alt="${project.title}" 
-                   class="carousel-image ${index === 0 ? 'active' : ''}"
-                   data-index="${index}">
-            `).join('')}
-          </div>
-          <button class="carousel-btn prev" id="carousel-prev">‹</button>
-          <button class="carousel-btn next" id="carousel-next">›</button>
-          <div class="carousel-dots">
-            ${images.map((_, index) => `
-              <span class="carousel-dot ${index === 0 ? 'active' : ''}" data-index="${index}"></span>
-            `).join('')}
-          </div>
-        </div>
-      ` : `
-        <div class="single-image-container">
-          <img src="${project.cover}" alt="${project.title}" class="detail-image">
-        </div>
-      `}
+    ` : `
+      <div class="single-image-container">
+        <img src="${project.cover}" alt="${project.title}" class="detail-image">
+      </div>
+    `}
+    ${project.description ? `
       <div class="detail-description">
-        <p>Proyecto de ${project.categories.join(' y ').toLowerCase()} que combina diseño y funcionalidad.</p>
+        <p>${project.description}</p>
       </div>
-    `;
+    ` : ''}
+  `;
 
+  detailsInner.style.opacity = '0';
+  detailsInner.style.transform = 'translateY(20px)';
+  
+  setTimeout(() => {
+    detailsInner.innerHTML = newContent;
+    requestAnimationFrame(() => {
+      detailsInner.style.opacity = '1';
+      detailsInner.style.transform = 'translateY(0)';
+    });
+    
+    if (images.length > 0) {
+      this.initCarousel(images.length);
+    }
+  }, 300);
+  if (!panel.classList.contains('active')) {
     panel.classList.add('active');
     if (gridContainer) {
       gridContainer.classList.add('panel-open');
     }
-
-    if (images.length > 0) {
-      this.initCarousel(images.length);
-    }
   }
+}
 
   initCarousel(totalImages) {
     this.currentCarouselIndex = 0;

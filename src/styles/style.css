@@ -22,7 +22,7 @@
   --shadow-particles: rgba(255, 255, 255, 0.95);
   --btype:2;
   
-  --filter-grayscale: grayscale(100%) brightness(0.7);
+  --filter-grayscale: grayscale(100%) brightness(1);
   --filter-normal: grayscale(0%) brightness(0.7);
 }
 
@@ -43,15 +43,15 @@
   --border-secondary: rgba(0, 0, 0, 0.08);
   
   --shadow-color: rgba(0, 0, 0, 0.05);
-  --overlay-bg: rgba(0, 0, 0, 0.75);
+  --overlay-bg: rgba(255, 255, 255, 0.75);
   
   --particle-color: rgba(128, 0, 255, 0.745);
   --line-color: rgb(200, 255, 0);
   --shadow-particles: transparent;
   --btype:1;
   
-  --filter-grayscale: grayscale(100%) brightness(1.1);
-  --filter-normal: grayscale(0%) brightness(1);
+  --filter-grayscale: grayscale(100%) contrast(90%) brightness(150%) sepia(0.3) hue-rotate(180deg);
+  --filter-normal: grayscale(0%) saturate(30%) contrast(80%)  brightness(180%);
 }
 
 
@@ -172,7 +172,7 @@ header {
   header {
     grid-area: 1 / 1 / 2 / 3;
     padding: 2rem;
-    margin-top: 40px;
+    margin-bottom: 20px;
     align-items: flex-start;
   }
 }
@@ -296,6 +296,7 @@ header {
   justify-content: center;
   pointer-events: none;
   transition: margin-right 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0.5;
 }
 
 .grid-container.panel-open {
@@ -307,6 +308,7 @@ header {
     grid-area: 2 / 2 / 3 / 4;
     position: relative;
     margin-left: -200px;
+    margin-top: 40px;
     align-items: flex-start;
   }
   
@@ -350,14 +352,50 @@ header {
   transform: scale(0) !important;
 }
 
+@keyframes float-random-1 {
+  0%, 100% { transform: translateY(0); }
+  25% { transform: translateY(-7px); }
+  50% { transform: translateY(-3px); }
+  75% { transform: translateY(-11px); }
+}
+
+@keyframes float-random-2 {
+  0%, 100% { transform: translateY(0); }
+  33% { transform: translateY(-9px); }
+  66% { transform: translateY(-5px); }
+}
+
+@keyframes float-random-3 {
+  0%, 100% { transform: translateY(0); }
+  20% { transform: translateY(-6px); }
+  60% { transform: translateY(-12px); }
+  80% { transform: translateY(-4px); }
+}
 .project-item.visible {
   opacity: 1;
+  animation: float-ultra-smooth 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 .project-item.hovered {
+  animation-play-state: paused !important;
   transform: scale(1.08) !important;
   z-index: 50 !important;
   opacity: 1;
+}
+
+
+.project-item.visible:nth-child(3n+1) {
+  animation: float-random-1 11.8s ease-in-out infinite;
+}
+
+.project-item.visible:nth-child(3n+2) {
+  animation: float-random-2 17.4s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+.project-item.visible:nth-child(3n+3) {
+  animation: float-random-3 9.2s ease-in-out infinite;
+  animation-delay: 1s;
 }
 
 .project-content {
@@ -377,7 +415,7 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: var(--filter-grayscale) opacity(0.5);
+  filter: var(--filter-grayscale) opacity(1);
   transition: filter 0.4s ease;
   pointer-events: none;
 }
@@ -440,11 +478,9 @@ header {
   pointer-events: none;
   transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 @media (max-width: 768px) {
   .details-container {
-    width: 100vw;
-    background: var(--overlay-bg);
+    width: 400px;
     backdrop-filter: blur(10px);
     opacity: 0;
     transition: opacity 0.4s ease;
@@ -452,7 +488,7 @@ header {
   
   .details-container:has(.details-panel.active) {
     opacity: 1;
-    width: 100vw;
+    width: 400px;
   }
 }
 
@@ -488,7 +524,11 @@ header {
     transform: translateY(0);
   }
 }
-
+#details-inner {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
 .details-content {
   height: 100%;
   background: linear-gradient(to bottom right, var(--bg-secondary), var(--bg-tertiary));
@@ -496,6 +536,7 @@ header {
   border-radius: 20px;
   border-left: 2px solid var(--border-secondary);
   padding: 2rem;
+  padding-top: 40px;
   overflow-y: auto;
   color: var(--text-primary);
 }
@@ -559,7 +600,7 @@ header {
 }
 
 .detail-tag {
-  font-size: 0.75rem;
+  font-size: 0.45rem;
   font-weight: bold;
   padding: 0.4rem 0.8rem;
   background: var(--bg-glass);
@@ -574,6 +615,7 @@ header {
   border-radius: 4px;
   overflow: hidden;
   border: 1px solid var(--border-secondary);
+  position: relative;
 }
 
 .carousel-wrapper {

@@ -33,7 +33,6 @@ class CVPanel {
       return;
     }
 
-    // Crear estructura fija del contenedor
     cvPanel.innerHTML = `
       <div class="cv-content">
         <div class="cv-inner"></div>
@@ -166,26 +165,20 @@ class CVPanel {
       setTimeout(() => {
         cvInner.innerHTML = newContent;
         
-        // Reset scroll position
         const cvContent = document.querySelector('.cv-content');
         if (cvContent) cvContent.scrollTop = 0;
         
-        // Fade in
         requestAnimationFrame(() => {
           cvInner.style.opacity = '1';
           cvInner.style.transform = 'translateY(0)';
         });
         
-        // Animar secciones individuales
         setTimeout(() => {
           this.animateItems(cvInner);
         }, 50);
       }, 300);
     } else {
-      // Primera carga sin animación
       cvInner.innerHTML = newContent;
-      
-      // Pequeño delay para primera animación
       setTimeout(() => {
         this.animateItems(cvInner);
       }, 100);
