@@ -1,0 +1,327 @@
+[
+  {
+    "id": 1,
+    "title": "Mapa de Residuos",
+    "categories": [
+      "ARQUITECTURA",
+      "DESARROLLO"
+    ],
+    "cover": "../src/assets/projects/proyecto-1/cover.jpg",
+    "images": [
+      "../src/assets/projects/proyecto-1/vid.gif",
+      "../src/assets/projects/proyecto-1/vid2.gif",
+      "../src/assets/projects/proyecto-1/img2.jpg",
+      "../src/assets/projects/proyecto-1/img1.jpg"
+    ],
+    "scale": 2,
+    "subtitle": "Visualización 3D de basura urbana en Santiago",
+    "description": "Mapeo tridimensional por comuna y manzana para analizar concentración de residuos usando QGIS, SQL y Blender."
+  },
+  {
+    "id": 2,
+    "title": "Geolocalización Escénica",
+    "categories": [
+      "ARQUITECTURA",
+      "DESARROLLO"
+    ],
+    "cover": "../src/assets/projects/proyecto-2/cover.jpg",
+    "images": [
+      "../src/assets/projects/proyecto-2/vid.gif",
+      "../src/assets/projects/proyecto-2/img1.jpg",
+      "../src/assets/projects/proyecto-2/img2.jpg",
+      "../src/assets/projects/proyecto-2/img3.jpg",
+      "../src/assets/projects/proyecto-2/img4.jpg"
+    ],
+    "scale": 2,
+    "subtitle": "Optimización de estructuras temporales a largo plazo",
+    "description": "Sistema computacional que define ubicaciones óptimas de escenarios en 30 años mediante Grasshopper, Rhino y Python."
+  },
+  {
+    "id": 3,
+    "title": "Escenarios Paramétricos",
+    "categories": [
+      "ARQUITECTURA",
+      "DESARROLLO"
+    ],
+    "cover": "../src/assets/projects/proyecto-3/cover.jpg",
+    "images": [
+      "../src/assets/projects/proyecto-3/img1.jpg",
+      "../src/assets/projects/proyecto-3/img2.jpg",
+      "../src/assets/projects/proyecto-3/img3.jpg",
+      "../src/assets/projects/proyecto-3/img4.jpg",
+      "../src/assets/projects/proyecto-3/img5.jpg",
+      "../src/assets/projects/proyecto-3/img6.jpg",
+      "../src/assets/projects/proyecto-3/img7.jpg"
+    ],
+    "scale": 1.5,
+    "subtitle": "Diseño generativo de arquitectura efímera",
+    "description": "Sistema paramétrico para generar escenarios temporales mediante lógica algorítmica adaptable."
+  },
+  {
+    "id": 4,
+    "title": "Movilidad Académica",
+    "categories": [
+      "DISEÑO",
+      "DESARROLLO"
+    ],
+    "cover": "../src/assets/projects/proyecto-4/cover.jpg",
+    "images": [
+      "../src/assets/projects/proyecto-4/vid.gif",
+      "../src/assets/projects/proyecto-4/img.png",
+      "../src/assets/projects/proyecto-4/img1.jpg",
+      "../src/assets/projects/proyecto-4/img2.jpg",
+      "../src/assets/projects/proyecto-4/img3.jpg"
+    ],
+    "scale": 1,
+    "subtitle": "Análisis visual de investigación urbana",
+    "description": "Revisión académica con visualización de datos que traduce relaciones de movilidad en gráficos interpretables."
+  },
+  {
+    "id": 5,
+    "title": "App Finanzas",
+    "categories": [
+      "DISEÑO",
+      "DESARROLLO"
+    ],
+    "cover": "../src/assets/projects/proyecto-5/cover.jpg",
+    "images": [
+      "../src/assets/projects/proyecto-5/img1.jpg",
+      "../src/assets/projects/proyecto-5/img2.jpg",
+      "../src/assets/projects/proyecto-5/img3.jpg"
+    ],
+    "scale": 1,
+    "subtitle": "Aplicación financiera colaborativa",
+    "description": "Desarrollo de app en Python orientada a gestión financiera, con enfoque en lógica funcional y despliegue."
+  },
+  {
+    "id": 6,
+    "title": "Biomaterial Cerveza",
+    "categories": [
+      "ARQUITECTURA",
+      "DESARROLLO"
+    ],
+    "cover": "../src/assets/projects/proyecto-6/cover.jpg",
+    "images": [
+      "../src/assets/projects/proyecto-6/img1.jpg",
+      "../src/assets/projects/proyecto-6/img2.jpg",
+      "../src/assets/projects/proyecto-6/img3.jpg",
+      "../src/assets/projects/proyecto-6/img4.jpg",
+      "../src/assets/projects/proyecto-6/img5.jpg",
+      "../src/assets/projects/proyecto-6/img6.jpg",
+      "../src/assets/projects/proyecto-6/img7.jpg"
+    ],
+    "scale": 2,
+    "subtitle": "Desarrollo de material a partir de residuos",
+    "description": "Creación de láminas biomateriales usando bagazo cervecero como alternativa sustentable."
+  },
+  {
+    "id": 7,
+    "title": "Fitorremediación Pucón",
+    "categories": [
+      "ARQUITECTURA"
+    ],
+    "cover": "../src/assets/projects/proyecto-7/cover.jpg",
+    "images": [
+      "../src/assets/projects/proyecto-7/img1.jpg",
+      "../src/assets/projects/proyecto-7/img2.jpg",
+      "../src/assets/projects/proyecto-7/img3.jpg"
+    ],
+    "scale": 1.5,
+    "subtitle": "Estrategia ecológica en paisaje hídrico",
+    "description": "Proyecto territorial que utiliza especies como diplodon chileno para estabilizar y limpiar aguas."
+  },
+  {
+    "id": 8,
+    "title": "Vivienda Colectiva",
+    "categories": [
+      "ARQUITECTURA"
+    ],
+    "cover": "../src/assets/projects/proyecto-8/cover.jpg",
+    "images": [
+      "../src/assets/projects/proyecto-8/img1.jpg",
+      "../src/assets/projects/proyecto-8/img2.jpg",
+      "../src/assets/projects/proyecto-8/img3.jpg"
+    ],
+    "scale": 1,
+    "subtitle": "Integración de paisaje en tipología habitacional",
+    "description": "Edificio de 4 pisos con dúplex que incorpora paisajismo interior como articulador espacial."
+  },
+  {
+    "id": 9,
+    "title": "Parque CAP",
+    "categories": [
+      "ARQUITECTURA"
+    ],
+    "cover": "../src/assets/projects/proyecto-9/cover.jpg",
+    "images": [
+      "../src/assets/projects/proyecto-9/img1.jpg",
+      "../src/assets/projects/proyecto-9/img2.jpg",
+      "../src/assets/projects/proyecto-9/img3.jpg"
+    ],
+    "scale": 1.5,
+    "subtitle": "Infraestructura urbana en acero",
+    "description": "Parque de conexión interurbana enfocado en espacio público y activación artística en zonas vulnerables."
+  },
+  {
+    "id": 10,
+    "title": "Sendero Los Andes",
+    "categories": [
+      "ARQUITECTURA"
+    ],
+    "cover": "../src/assets/projects/proyecto-10/cover.jpg",
+    "images": [
+      "../src/assets/projects/proyecto-10/img1.jpg",
+      "../src/assets/projects/proyecto-10/img2.jpg",
+      "../src/assets/projects/proyecto-10/img3.jpg"
+    ],
+    "scale": 1,
+    "subtitle": "Recorrido patrimonial y ecológico",
+    "description": "Diseño de sendero en Cerro La Virgen que integra paisaje, vegetación nativa y recorrido cultural."
+  },
+  {
+    "id": 11,
+    "title": "Centro Cultural Serena",
+    "categories": [
+      "ARQUITECTURA"
+    ],
+    "cover": "../src/assets/projects/proyecto-11/cover.jpg",
+    "images": [
+      "../src/assets/projects/proyecto-11/img1.jpg",
+      "../src/assets/projects/proyecto-11/img2.jpg",
+      "../src/assets/projects/proyecto-11/img3.jpg"
+    ],
+    "scale": 1,
+    "subtitle": "Espacio público para artes escénicas",
+    "description": "Centro de eventos con talleres y sala de conciertos enfocado en uso comunitario."
+  },
+  {
+    "id": 12,
+    "title": "Fenoceri UX",
+    "categories": [
+      "DISEÑO",
+      "DESARROLLO"
+    ],
+    "cover": "../src/assets/projects/proyecto-12/cover.png",
+    "images": [
+      "../src/assets/projects/proyecto-12/vid.gif",
+      "../src/assets/projects/proyecto-12/img1.png"
+    ],
+    "scale": 1.5,
+    "subtitle": "Plataforma e-commerce inclusiva",
+    "description": "Diseño UX para tienda enfocada en diversidad corporal, integrando contenido y experiencia digital."
+  },
+  {
+    "id": 13,
+    "title": "Estrategia Redes",
+    "categories": [
+      "DISEÑO"
+    ],
+    "cover": "../src/assets/projects/proyecto-13/cover.jpg",
+    "images": [
+      "../src/assets/projects/proyecto-13/img1.jpg",
+      "../src/assets/projects/proyecto-13/img2.jpg",
+      "../src/assets/projects/proyecto-13/img3.jpg"
+    ],
+    "scale": 0.5,
+    "subtitle": "Gestión y contenido digital",
+    "description": "Desarrollo de contenido y narrativa visual para redes sociales con enfoque en engagement."
+  },
+  {
+    "id": 14,
+    "title": "Proyecto VIXE",
+    "categories": [
+      "DISEÑO"
+    ],
+    "cover": "../src/assets/projects/proyecto-14/cover.jpg",
+    "images": [
+      "../src/assets/projects/proyecto-14/img1.jpg",
+      "../src/assets/projects/proyecto-14/img2.jpg",
+      "../src/assets/projects/proyecto-14/img3.jpg"
+    ],
+    "scale": 1,
+    "subtitle": "Dirección visual y contenido musical",
+    "description": "Desarrollo de identidad visual, videoclip y gestión gráfica para artista musical."
+  },
+  {
+    "id": 15,
+    "title": "Cartas 3D",
+    "categories": [
+      "DISEÑO"
+    ],
+    "cover": "../src/assets/projects/proyecto-15/cover.jpg",
+    "images": [
+      "../src/assets/projects/proyecto-15/img1.jpg",
+      "../src/assets/projects/proyecto-15/img2.jpg",
+      "../src/assets/projects/proyecto-15/img3.jpg"
+    ],
+    "scale": 1.5,
+    "subtitle": "Sistema visual interactivo para contenido",
+    "description": "Creación de elementos 3D reutilizables para producción de contenido dinámico en redes."
+  },
+  {
+    "id": 16,
+    "title": "Animación Papercut",
+    "categories": [
+      "DISEÑO"
+    ],
+    "cover": "../src/assets/projects/proyecto-16/cover.jpg",
+    "images": [
+      "../src/assets/projects/proyecto-16/img1.jpg",
+      "../src/assets/projects/proyecto-16/img2.jpg",
+      "../src/assets/projects/proyecto-16/img3.jpg"
+    ],
+    "scale": 0.5,
+    "subtitle": "Exploración visual en Blender",
+    "description": "Video animado estilo papercraft en movimiento como ejercicio de narrativa visual."
+  },
+  {
+    "id": 17,
+    "title": "Videojuego AISA",
+    "categories": [
+      "DISEÑO",
+      "DESARROLLO"
+    ],
+    "cover": "../src/assets/projects/proyecto-17/cover.jpg",
+    "images": [
+      "../src/assets/projects/proyecto-17/img1.jpg",
+      "../src/assets/projects/proyecto-17/img2.jpg",
+      "../src/assets/projects/proyecto-17/img3.jpg"
+    ],
+    "scale": 2,
+    "subtitle": "Desarrollo de videojuego Metroidvania",
+    "description": "Proyecto de videojuego con estética tarot y enfoque en combate tipo boss rush."
+  },
+  {
+    "id": 18,
+    "title": "Levantamiento ANEF",
+    "categories": [
+      "ARQUITECTURA"
+    ],
+    "cover": "../src/assets/projects/proyecto-18/cover.jpg",
+    "images": [
+      "../src/assets/projects/proyecto-18/img1.jpg",
+      "../src/assets/projects/proyecto-18/img2.jpg",
+      "../src/assets/projects/proyecto-18/img3.jpg"
+    ],
+    "scale": 1,
+    "subtitle": "Documentación técnica de edificio público",
+    "description": "Levantamiento planimétrico completo del edificio de la Agrupación Nacional de Empleados Fiscales."
+  },
+  {
+    "id": 19,
+    "title": "Overlay TikTok",
+    "categories": [
+      "DISEÑO",
+      "DESARROLLO"
+    ],
+    "cover": "../src/assets/projects/proyecto-19/cover.jpg",
+    "images": [
+      "../src/assets/projects/proyecto-19/img1.jpg",
+      "../src/assets/projects/proyecto-19/img2.jpg",
+      "../src/assets/projects/proyecto-19/img3.jpg"
+    ],
+    "scale": 1.5,
+    "subtitle": "Interfaz interactiva para streaming",
+    "description": "Herramienta web que gestiona interacción en vivo mostrando y controlando usuarios en tiempo real."
+  }
+]
