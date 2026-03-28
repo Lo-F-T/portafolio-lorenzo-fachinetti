@@ -6,12 +6,12 @@
       "ARQUITECTURA",
       "DESARROLLO"
     ],
-    "cover": "../src/assets/projects/proyecto-1/cover.jpg",
+    "cover": "src/assets/projects/proyecto-1/cover.jpg",
     "images": [
-      "../src/assets/projects/proyecto-1/vid.gif",
-      "../src/assets/projects/proyecto-1/vid2.gif",
-      "../src/assets/projects/proyecto-1/img2.jpg",
-      "../src/assets/projects/proyecto-1/img1.jpg"
+      "src/assets/projects/proyecto-1/vid.gif",
+      "src/assets/projects/proyecto-1/vid2.gif",
+      "src/assets/projects/proyecto-1/img2.jpg",
+      "src/assets/projects/proyecto-1/img1.jpg"
     ],
     "scale": 2,
     "subtitle": "Visualización 3D de basura urbana en Santiago",
@@ -24,13 +24,13 @@
       "ARQUITECTURA",
       "DESARROLLO"
     ],
-    "cover": "../src/assets/projects/proyecto-2/cover.jpg",
+    "cover": "src/assets/projects/proyecto-2/cover.jpg",
     "images": [
-      "../src/assets/projects/proyecto-2/vid.gif",
-      "../src/assets/projects/proyecto-2/img1.jpg",
-      "../src/assets/projects/proyecto-2/img2.jpg",
-      "../src/assets/projects/proyecto-2/img3.jpg",
-      "../src/assets/projects/proyecto-2/img4.jpg"
+      "src/assets/projects/proyecto-2/vid.gif",
+      "src/assets/projects/proyecto-2/img1.jpg",
+      "src/assets/projects/proyecto-2/img2.jpg",
+      "src/assets/projects/proyecto-2/img3.jpg",
+      "src/assets/projects/proyecto-2/img4.jpg"
     ],
     "scale": 2,
     "subtitle": "Optimización de estructuras temporales a largo plazo",
@@ -43,15 +43,15 @@
       "ARQUITECTURA",
       "DESARROLLO"
     ],
-    "cover": "../src/assets/projects/proyecto-3/cover.jpg",
+    "cover": "src/assets/projects/proyecto-3/cover.jpg",
     "images": [
-      "../src/assets/projects/proyecto-3/img1.jpg",
-      "../src/assets/projects/proyecto-3/img2.jpg",
-      "../src/assets/projects/proyecto-3/img3.jpg",
-      "../src/assets/projects/proyecto-3/img4.jpg",
-      "../src/assets/projects/proyecto-3/img5.jpg",
-      "../src/assets/projects/proyecto-3/img6.jpg",
-      "../src/assets/projects/proyecto-3/img7.jpg"
+      "src/assets/projects/proyecto-3/img1.jpg",
+      "src/assets/projects/proyecto-3/img2.jpg",
+      "src/assets/projects/proyecto-3/img3.jpg",
+      "src/assets/projects/proyecto-3/img4.jpg",
+      "src/assets/projects/proyecto-3/img5.jpg",
+      "src/assets/projects/proyecto-3/img6.jpg",
+      "src/assets/projects/proyecto-3/img7.jpg"
     ],
     "scale": 1.5,
     "subtitle": "Diseño generativo de arquitectura efímera",
@@ -64,13 +64,13 @@
       "DISEÑO",
       "DESARROLLO"
     ],
-    "cover": "../src/assets/projects/proyecto-4/cover.jpg",
+    "cover": "src/assets/projects/proyecto-4/cover.jpg",
     "images": [
-      "../src/assets/projects/proyecto-4/vid.gif",
-      "../src/assets/projects/proyecto-4/img.png",
-      "../src/assets/projects/proyecto-4/img1.jpg",
-      "../src/assets/projects/proyecto-4/img2.jpg",
-      "../src/assets/projects/proyecto-4/img3.jpg"
+      "src/assets/projects/proyecto-4/vid.gif",
+      "src/assets/projects/proyecto-4/img.png",
+      "src/assets/projects/proyecto-4/img1.jpg",
+      "src/assets/projects/proyecto-4/img2.jpg",
+      "src/assets/projects/proyecto-4/img3.jpg"
     ],
     "scale": 1,
     "subtitle": "Análisis visual de investigación urbana",
@@ -83,11 +83,11 @@
       "DISEÑO",
       "DESARROLLO"
     ],
-    "cover": "../src/assets/projects/proyecto-5/cover.jpg",
+    "cover": "src/assets/projects/proyecto-5/cover.jpg",
     "images": [
-      "../src/assets/projects/proyecto-5/img1.jpg",
-      "../src/assets/projects/proyecto-5/img2.jpg",
-      "../src/assets/projects/proyecto-5/img3.jpg"
+      "src/assets/projects/proyecto-5/img1.jpg",
+      "src/assets/projects/proyecto-5/img2.jpg",
+      "src/assets/projects/proyecto-5/img3.jpg"
     ],
     "scale": 1,
     "subtitle": "Aplicación financiera colaborativa",
@@ -100,15 +100,15 @@
       "ARQUITECTURA",
       "DESARROLLO"
     ],
-    "cover": "../src/assets/projects/proyecto-6/cover.jpg",
+    "cover": "src/assets/projects/proyecto-6/cover.jpg",
     "images": [
-      "../src/assets/projects/proyecto-6/img1.jpg",
-      "../src/assets/projects/proyecto-6/img2.jpg",
-      "../src/assets/projects/proyecto-6/img3.jpg",
-      "../src/assets/projects/proyecto-6/img4.jpg",
-      "../src/assets/projects/proyecto-6/img5.jpg",
-      "../src/assets/projects/proyecto-6/img6.jpg",
-      "../src/assets/projects/proyecto-6/img7.jpg"
+      "src/assets/projects/proyecto-6/img1.jpg",
+      "src/assets/projects/proyecto-6/img2.jpg",
+      "src/assets/projects/proyecto-6/img3.jpg",
+      "src/assets/projects/proyecto-6/img4.jpg",
+      "src/assets/projects/proyecto-6/img5.jpg",
+      "src/assets/projects/proyecto-6/img6.jpg",
+      "src/assets/projects/proyecto-6/img7.jpg"
     ],
     "scale": 2,
     "subtitle": "Desarrollo de material a partir de residuos",
@@ -120,11 +120,11 @@
     "categories": [
       "ARQUITECTURA"
     ],
-    "cover": "../src/assets/projects/proyecto-7/cover.jpg",
+    "cover": "src/assets/projects/proyecto-7/cover.jpg",
     "images": [
-      "../src/assets/projects/proyecto-7/img1.jpg",
-      "../src/assets/projects/proyecto-7/img2.jpg",
-      "../src/assets/projects/proyecto-7/img3.jpg"
+      "src/assets/projects/proyecto-7/img1.jpg",
+      "src/assets/projects/proyecto-7/img2.jpg",
+      "src/assets/projects/proyecto-7/img3.jpg"
     ],
     "scale": 1.5,
     "subtitle": "Estrategia ecológica en paisaje hídrico",
@@ -136,11 +136,11 @@
     "categories": [
       "ARQUITECTURA"
     ],
-    "cover": "../src/assets/projects/proyecto-8/cover.jpg",
+    "cover": "src/assets/projects/proyecto-8/cover.jpg",
     "images": [
-      "../src/assets/projects/proyecto-8/img1.jpg",
-      "../src/assets/projects/proyecto-8/img2.jpg",
-      "../src/assets/projects/proyecto-8/img3.jpg"
+      "src/assets/projects/proyecto-8/img1.jpg",
+      "src/assets/projects/proyecto-8/img2.jpg",
+      "src/assets/projects/proyecto-8/img3.jpg"
     ],
     "scale": 1,
     "subtitle": "Integración de paisaje en tipología habitacional",
@@ -152,11 +152,11 @@
     "categories": [
       "ARQUITECTURA"
     ],
-    "cover": "../src/assets/projects/proyecto-9/cover.jpg",
+    "cover": "src/assets/projects/proyecto-9/cover.jpg",
     "images": [
-      "../src/assets/projects/proyecto-9/img1.jpg",
-      "../src/assets/projects/proyecto-9/img2.jpg",
-      "../src/assets/projects/proyecto-9/img3.jpg"
+      "src/assets/projects/proyecto-9/img1.jpg",
+      "src/assets/projects/proyecto-9/img2.jpg",
+      "src/assets/projects/proyecto-9/img3.jpg"
     ],
     "scale": 1.5,
     "subtitle": "Infraestructura urbana en acero",
@@ -168,11 +168,11 @@
     "categories": [
       "ARQUITECTURA"
     ],
-    "cover": "../src/assets/projects/proyecto-10/cover.jpg",
+    "cover": "src/assets/projects/proyecto-10/cover.jpg",
     "images": [
-      "../src/assets/projects/proyecto-10/img1.jpg",
-      "../src/assets/projects/proyecto-10/img2.jpg",
-      "../src/assets/projects/proyecto-10/img3.jpg"
+      "src/assets/projects/proyecto-10/img1.jpg",
+      "src/assets/projects/proyecto-10/img2.jpg",
+      "src/assets/projects/proyecto-10/img3.jpg"
     ],
     "scale": 1,
     "subtitle": "Recorrido patrimonial y ecológico",
@@ -184,11 +184,11 @@
     "categories": [
       "ARQUITECTURA"
     ],
-    "cover": "../src/assets/projects/proyecto-11/cover.jpg",
+    "cover": "src/assets/projects/proyecto-11/cover.jpg",
     "images": [
-      "../src/assets/projects/proyecto-11/img1.jpg",
-      "../src/assets/projects/proyecto-11/img2.jpg",
-      "../src/assets/projects/proyecto-11/img3.jpg"
+      "src/assets/projects/proyecto-11/img1.jpg",
+      "src/assets/projects/proyecto-11/img2.jpg",
+      "src/assets/projects/proyecto-11/img3.jpg"
     ],
     "scale": 1,
     "subtitle": "Espacio público para artes escénicas",
@@ -201,10 +201,10 @@
       "DISEÑO",
       "DESARROLLO"
     ],
-    "cover": "../src/assets/projects/proyecto-12/cover.png",
+    "cover": "src/assets/projects/proyecto-12/cover.png",
     "images": [
-      "../src/assets/projects/proyecto-12/vid.gif",
-      "../src/assets/projects/proyecto-12/img1.png"
+      "src/assets/projects/proyecto-12/vid.gif",
+      "src/assets/projects/proyecto-12/img1.png"
     ],
     "scale": 1.5,
     "subtitle": "Plataforma e-commerce inclusiva",
@@ -216,11 +216,11 @@
     "categories": [
       "DISEÑO"
     ],
-    "cover": "../src/assets/projects/proyecto-13/cover.jpg",
+    "cover": "src/assets/projects/proyecto-13/cover.jpg",
     "images": [
-      "../src/assets/projects/proyecto-13/img1.jpg",
-      "../src/assets/projects/proyecto-13/img2.jpg",
-      "../src/assets/projects/proyecto-13/img3.jpg"
+      "src/assets/projects/proyecto-13/img1.jpg",
+      "src/assets/projects/proyecto-13/img2.jpg",
+      "src/assets/projects/proyecto-13/img3.jpg"
     ],
     "scale": 0.5,
     "subtitle": "Gestión y contenido digital",
@@ -232,11 +232,11 @@
     "categories": [
       "DISEÑO"
     ],
-    "cover": "../src/assets/projects/proyecto-14/cover.jpg",
+    "cover": "src/assets/projects/proyecto-14/cover.jpg",
     "images": [
-      "../src/assets/projects/proyecto-14/img1.jpg",
-      "../src/assets/projects/proyecto-14/img2.jpg",
-      "../src/assets/projects/proyecto-14/img3.jpg"
+      "src/assets/projects/proyecto-14/img1.jpg",
+      "src/assets/projects/proyecto-14/img2.jpg",
+      "src/assets/projects/proyecto-14/img3.jpg"
     ],
     "scale": 1,
     "subtitle": "Dirección visual y contenido musical",
@@ -248,11 +248,11 @@
     "categories": [
       "DISEÑO"
     ],
-    "cover": "../src/assets/projects/proyecto-15/cover.jpg",
+    "cover": "src/assets/projects/proyecto-15/cover.jpg",
     "images": [
-      "../src/assets/projects/proyecto-15/img1.jpg",
-      "../src/assets/projects/proyecto-15/img2.jpg",
-      "../src/assets/projects/proyecto-15/img3.jpg"
+      "src/assets/projects/proyecto-15/img1.jpg",
+      "src/assets/projects/proyecto-15/img2.jpg",
+      "src/assets/projects/proyecto-15/img3.jpg"
     ],
     "scale": 1.5,
     "subtitle": "Sistema visual interactivo para contenido",
@@ -264,11 +264,11 @@
     "categories": [
       "DISEÑO"
     ],
-    "cover": "../src/assets/projects/proyecto-16/cover.jpg",
+    "cover": "src/assets/projects/proyecto-16/cover.jpg",
     "images": [
-      "../src/assets/projects/proyecto-16/img1.jpg",
-      "../src/assets/projects/proyecto-16/img2.jpg",
-      "../src/assets/projects/proyecto-16/img3.jpg"
+      "src/assets/projects/proyecto-16/img1.jpg",
+      "src/assets/projects/proyecto-16/img2.jpg",
+      "src/assets/projects/proyecto-16/img3.jpg"
     ],
     "scale": 0.5,
     "subtitle": "Exploración visual en Blender",
@@ -281,11 +281,11 @@
       "DISEÑO",
       "DESARROLLO"
     ],
-    "cover": "../src/assets/projects/proyecto-17/cover.jpg",
+    "cover": "src/assets/projects/proyecto-17/cover.jpg",
     "images": [
-      "../src/assets/projects/proyecto-17/img1.jpg",
-      "../src/assets/projects/proyecto-17/img2.jpg",
-      "../src/assets/projects/proyecto-17/img3.jpg"
+      "src/assets/projects/proyecto-17/img1.jpg",
+      "src/assets/projects/proyecto-17/img2.jpg",
+      "src/assets/projects/proyecto-17/img3.jpg"
     ],
     "scale": 2,
     "subtitle": "Desarrollo de videojuego Metroidvania",
@@ -297,11 +297,11 @@
     "categories": [
       "ARQUITECTURA"
     ],
-    "cover": "../src/assets/projects/proyecto-18/cover.jpg",
+    "cover": "src/assets/projects/proyecto-18/cover.jpg",
     "images": [
-      "../src/assets/projects/proyecto-18/img1.jpg",
-      "../src/assets/projects/proyecto-18/img2.jpg",
-      "../src/assets/projects/proyecto-18/img3.jpg"
+      "src/assets/projects/proyecto-18/img1.jpg",
+      "src/assets/projects/proyecto-18/img2.jpg",
+      "src/assets/projects/proyecto-18/img3.jpg"
     ],
     "scale": 1,
     "subtitle": "Documentación técnica de edificio público",
@@ -314,11 +314,11 @@
       "DISEÑO",
       "DESARROLLO"
     ],
-    "cover": "../src/assets/projects/proyecto-19/cover.jpg",
+    "cover": "src/assets/projects/proyecto-19/cover.jpg",
     "images": [
-      "../src/assets/projects/proyecto-19/img1.jpg",
-      "../src/assets/projects/proyecto-19/img2.jpg",
-      "../src/assets/projects/proyecto-19/img3.jpg"
+      "src/assets/projects/proyecto-19/img1.jpg",
+      "src/assets/projects/proyecto-19/img2.jpg",
+      "src/assets/projects/proyecto-19/img3.jpg"
     ],
     "scale": 1.5,
     "subtitle": "Interfaz interactiva para streaming",
