@@ -1,0 +1,148 @@
+  [
+    {
+    "id": 5,
+    "title": "App Finanzas",
+    "categories": [
+      "DISEÑO",
+      "DESARROLLO"
+    ],
+    "cover": "src/assets/projects/proyecto-5/cover.jpg",
+    "images": [
+      "src/assets/projects/proyecto-5/img1.jpg",
+      "src/assets/projects/proyecto-5/img2.jpg",
+      "src/assets/projects/proyecto-5/img3.jpg"
+    ],
+    "scale": 1,
+    "subtitle": "Aplicación financiera colaborativa",
+    "description": "Desarrollo de app en Python orientada a gestión financiera, con enfoque en lógica funcional y despliegue."
+  },
+  {
+    "id": 19,
+    "title": "Overlay TikTok",
+    "categories": [
+      "DISEÑO",
+      "DESARROLLO"
+    ],
+    "cover": "src/assets/projects/proyecto-19/cover.jpg",
+    "images": [
+      "src/assets/projects/proyecto-19/img1.jpg",
+      "src/assets/projects/proyecto-19/img2.jpg",
+      "src/assets/projects/proyecto-19/img3.jpg"
+    ],
+    "scale": 1.5,
+    "subtitle": "Interfaz interactiva para streaming",
+    "description": "Herramienta web que gestiona interacción en vivo mostrando y controlando usuarios en tiempo real."
+  },
+  {
+    "id": 16,
+    "title": "Animación Papercut",
+    "categories": [
+      "DISEÑO"
+    ],
+    "cover": "src/assets/projects/proyecto-16/cover.jpg",
+    "images": [
+      "src/assets/projects/proyecto-16/img1.jpg",
+      "src/assets/projects/proyecto-16/img2.jpg",
+      "src/assets/projects/proyecto-16/img3.jpg"
+    ],
+    "scale": 0.5,
+    "subtitle": "Exploración visual en Blender",
+    "description": "Video animado estilo papercraft en movimiento como ejercicio de narrativa visual."
+  },
+  {
+    "id": 15,
+    "title": "Cartas 3D",
+    "categories": [
+      "DISEÑO"
+    ],
+    "cover": "src/assets/projects/proyecto-15/cover.jpg",
+    "images": [
+      "src/assets/projects/proyecto-15/img1.jpg",
+      "src/assets/projects/proyecto-15/img2.jpg",
+      "src/assets/projects/proyecto-15/img3.jpg"
+    ],
+    "scale": 1.5,
+    "subtitle": "Sistema visual interactivo para contenido",
+    "description": "Creación de elementos 3D reutilizables para producción de contenido dinámico en redes."
+  },
+  {
+    "id": 11,
+    "title": "Centro Cultural Serena",
+    "categories": [
+      "ARQUITECTURA"
+    ],
+    "cover": "src/assets/projects/proyecto-11/cover.jpg",
+    "images": [
+      "src/assets/projects/proyecto-11/img1.jpg",
+      "src/assets/projects/proyecto-11/img2.jpg",
+      "src/assets/projects/proyecto-11/img3.jpg"
+    ],
+    "scale": 1,
+    "subtitle": "Espacio público para artes escénicas",
+    "description": "Centro de eventos con talleres y sala de conciertos enfocado en uso comunitario."
+  },
+  {
+    "id": 7,
+    "title": "Fitorremediación Pucón",
+    "categories": [
+      "ARQUITECTURA"
+    ],
+    "cover": "src/assets/projects/proyecto-7/cover.jpg",
+    "images": [
+      "src/assets/projects/proyecto-7/img1.jpg",
+      "src/assets/projects/proyecto-7/img2.jpg",
+      "src/assets/projects/proyecto-7/img3.jpg"
+    ],
+    "scale": 1.5,
+    "subtitle": "Estrategia ecológica en paisaje hídrico",
+    "description": "Proyecto territorial que utiliza especies como diplodon chileno para estabilizar y limpiar aguas."
+  },
+  {
+    "id": 8,
+    "title": "Vivienda Colectiva",
+    "categories": [
+      "ARQUITECTURA"
+    ],
+    "cover": "src/assets/projects/proyecto-8/cover.jpg",
+    "images": [
+      "src/assets/projects/proyecto-8/img1.jpg",
+      "src/assets/projects/proyecto-8/img2.jpg",
+      "src/assets/projects/proyecto-8/img3.jpg"
+    ],
+    "scale": 1,
+    "subtitle": "Integración de paisaje en tipología habitacional",
+    "description": "Edificio de 4 pisos con dúplex que incorpora paisajismo interior como articulador espacial."
+  },
+  {
+    "id": 10,
+    "title": "Sendero Los Andes",
+    "categories": [
+      "ARQUITECTURA"
+    ],
+    "cover": "src/assets/projects/proyecto-10/cover.jpg",
+    "images": [
+      "src/assets/projects/proyecto-10/img1.jpg",
+      "src/assets/projects/proyecto-10/img2.jpg",
+      "src/assets/projects/proyecto-10/img3.jpg"
+    ],
+    "scale": 1,
+    "subtitle": "Recorrido patrimonial y ecológico",
+    "description": "Diseño de sendero en Cerro La Virgen que integra paisaje, vegetación nativa y recorrido cultural."
+  },
+  {
+    "id": 14,
+    "title": "Proyecto VIXE",
+    "categories": [
+      "DISEÑO"
+    ],
+    "cover": "src/assets/projects/proyecto-14/cover.jpg",
+    "images": [
+      "src/assets/projects/proyecto-14/img1.jpg",
+      "src/assets/projects/proyecto-14/img2.jpg",
+      "src/assets/projects/proyecto-14/img3.jpg"
+    ],
+    "scale": 1,
+    "subtitle": "Dirección visual y contenido musical",
+    "description": "Desarrollo de identidad visual, videoclip y gestión gráfica para artista musical."
+  }
+]

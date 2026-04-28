@@ -43,15 +43,15 @@
       "ARQUITECTURA",
       "DESARROLLO"
     ],
-    "cover": "src/assets/projects/proyecto-3/cover.jpg",
+    "cover": "src/assets/projects/proyecto-3/cover.png",
     "images": [
-      "src/assets/projects/proyecto-3/img1.jpg",
-      "src/assets/projects/proyecto-3/img2.jpg",
-      "src/assets/projects/proyecto-3/img3.jpg",
-      "src/assets/projects/proyecto-3/img4.jpg",
-      "src/assets/projects/proyecto-3/img5.jpg",
-      "src/assets/projects/proyecto-3/img6.jpg",
-      "src/assets/projects/proyecto-3/img7.jpg"
+      "src/assets/projects/proyecto-3/img1.png",
+      "src/assets/projects/proyecto-3/img2.png",
+      "src/assets/projects/proyecto-3/img3.png",
+      "src/assets/projects/proyecto-3/img4.png",
+      "src/assets/projects/proyecto-3/img5.png",
+      "src/assets/projects/proyecto-3/img6.png",
+      "src/assets/projects/proyecto-3/img7.png"
     ],
     "scale": 1.5,
     "subtitle": "Diseño generativo de arquitectura efímera",
@@ -59,7 +59,7 @@
   },
   {
     "id": 4,
-    "title": "Movilidad Académica",
+    "title": "Salud y Movilidad Urbana",
     "categories": [
       "DISEÑO",
       "DESARROLLO"
@@ -72,26 +72,9 @@
       "src/assets/projects/proyecto-4/img2.jpg",
       "src/assets/projects/proyecto-4/img3.jpg"
     ],
-    "scale": 1,
+    "scale": 1.5,
     "subtitle": "Análisis visual de investigación urbana",
     "description": "Revisión académica con visualización de datos que traduce relaciones de movilidad en gráficos interpretables."
-  },
-  {
-    "id": 5,
-    "title": "App Finanzas",
-    "categories": [
-      "DISEÑO",
-      "DESARROLLO"
-    ],
-    "cover": "src/assets/projects/proyecto-5/cover.jpg",
-    "images": [
-      "src/assets/projects/proyecto-5/img1.jpg",
-      "src/assets/projects/proyecto-5/img2.jpg",
-      "src/assets/projects/proyecto-5/img3.jpg"
-    ],
-    "scale": 1,
-    "subtitle": "Aplicación financiera colaborativa",
-    "description": "Desarrollo de app en Python orientada a gestión financiera, con enfoque en lógica funcional y despliegue."
   },
   {
     "id": 6,
@@ -115,38 +98,6 @@
     "description": "Creación de láminas biomateriales usando bagazo cervecero como alternativa sustentable."
   },
   {
-    "id": 7,
-    "title": "Fitorremediación Pucón",
-    "categories": [
-      "ARQUITECTURA"
-    ],
-    "cover": "src/assets/projects/proyecto-7/cover.jpg",
-    "images": [
-      "src/assets/projects/proyecto-7/img1.jpg",
-      "src/assets/projects/proyecto-7/img2.jpg",
-      "src/assets/projects/proyecto-7/img3.jpg"
-    ],
-    "scale": 1.5,
-    "subtitle": "Estrategia ecológica en paisaje hídrico",
-    "description": "Proyecto territorial que utiliza especies como diplodon chileno para estabilizar y limpiar aguas."
-  },
-  {
-    "id": 8,
-    "title": "Vivienda Colectiva",
-    "categories": [
-      "ARQUITECTURA"
-    ],
-    "cover": "src/assets/projects/proyecto-8/cover.jpg",
-    "images": [
-      "src/assets/projects/proyecto-8/img1.jpg",
-      "src/assets/projects/proyecto-8/img2.jpg",
-      "src/assets/projects/proyecto-8/img3.jpg"
-    ],
-    "scale": 1,
-    "subtitle": "Integración de paisaje en tipología habitacional",
-    "description": "Edificio de 4 pisos con dúplex que incorpora paisajismo interior como articulador espacial."
-  },
-  {
     "id": 9,
     "title": "Parque CAP",
     "categories": [
@@ -156,43 +107,13 @@
     "images": [
       "src/assets/projects/proyecto-9/img1.jpg",
       "src/assets/projects/proyecto-9/img2.jpg",
-      "src/assets/projects/proyecto-9/img3.jpg"
+      "src/assets/projects/proyecto-9/img3.jpg",
+      "src/assets/projects/proyecto-9/img4.jpg",
+      "src/assets/projects/proyecto-9/img5.jpg"
     ],
     "scale": 1.5,
     "subtitle": "Infraestructura urbana en acero",
     "description": "Parque de conexión interurbana enfocado en espacio público y activación artística en zonas vulnerables."
-  },
-  {
-    "id": 10,
-    "title": "Sendero Los Andes",
-    "categories": [
-      "ARQUITECTURA"
-    ],
-    "cover": "src/assets/projects/proyecto-10/cover.jpg",
-    "images": [
-      "src/assets/projects/proyecto-10/img1.jpg",
-      "src/assets/projects/proyecto-10/img2.jpg",
-      "src/assets/projects/proyecto-10/img3.jpg"
-    ],
-    "scale": 1,
-    "subtitle": "Recorrido patrimonial y ecológico",
-    "description": "Diseño de sendero en Cerro La Virgen que integra paisaje, vegetación nativa y recorrido cultural."
-  },
-  {
-    "id": 11,
-    "title": "Centro Cultural Serena",
-    "categories": [
-      "ARQUITECTURA"
-    ],
-    "cover": "src/assets/projects/proyecto-11/cover.jpg",
-    "images": [
-      "src/assets/projects/proyecto-11/img1.jpg",
-      "src/assets/projects/proyecto-11/img2.jpg",
-      "src/assets/projects/proyecto-11/img3.jpg"
-    ],
-    "scale": 1,
-    "subtitle": "Espacio público para artes escénicas",
-    "description": "Centro de eventos con talleres y sala de conciertos enfocado en uso comunitario."
   },
   {
     "id": 12,
@@ -220,59 +141,12 @@
     "images": [
       "src/assets/projects/proyecto-13/img1.jpg",
       "src/assets/projects/proyecto-13/img2.jpg",
-      "src/assets/projects/proyecto-13/img3.jpg"
+      "src/assets/projects/proyecto-13/img3.jpg",
+      "src/assets/projects/proyecto-13/img4.jpg"
     ],
-    "scale": 0.5,
+    "scale": 2,
     "subtitle": "Gestión y contenido digital",
     "description": "Desarrollo de contenido y narrativa visual para redes sociales con enfoque en engagement."
-  },
-  {
-    "id": 14,
-    "title": "Proyecto VIXE",
-    "categories": [
-      "DISEÑO"
-    ],
-    "cover": "src/assets/projects/proyecto-14/cover.jpg",
-    "images": [
-      "src/assets/projects/proyecto-14/img1.jpg",
-      "src/assets/projects/proyecto-14/img2.jpg",
-      "src/assets/projects/proyecto-14/img3.jpg"
-    ],
-    "scale": 1,
-    "subtitle": "Dirección visual y contenido musical",
-    "description": "Desarrollo de identidad visual, videoclip y gestión gráfica para artista musical."
-  },
-  {
-    "id": 15,
-    "title": "Cartas 3D",
-    "categories": [
-      "DISEÑO"
-    ],
-    "cover": "src/assets/projects/proyecto-15/cover.jpg",
-    "images": [
-      "src/assets/projects/proyecto-15/img1.jpg",
-      "src/assets/projects/proyecto-15/img2.jpg",
-      "src/assets/projects/proyecto-15/img3.jpg"
-    ],
-    "scale": 1.5,
-    "subtitle": "Sistema visual interactivo para contenido",
-    "description": "Creación de elementos 3D reutilizables para producción de contenido dinámico en redes."
-  },
-  {
-    "id": 16,
-    "title": "Animación Papercut",
-    "categories": [
-      "DISEÑO"
-    ],
-    "cover": "src/assets/projects/proyecto-16/cover.jpg",
-    "images": [
-      "src/assets/projects/proyecto-16/img1.jpg",
-      "src/assets/projects/proyecto-16/img2.jpg",
-      "src/assets/projects/proyecto-16/img3.jpg"
-    ],
-    "scale": 0.5,
-    "subtitle": "Exploración visual en Blender",
-    "description": "Video animado estilo papercraft en movimiento como ejercicio de narrativa visual."
   },
   {
     "id": 17,
@@ -283,13 +157,11 @@
     ],
     "cover": "src/assets/projects/proyecto-17/cover.jpg",
     "images": [
-      "src/assets/projects/proyecto-17/img1.jpg",
-      "src/assets/projects/proyecto-17/img2.jpg",
-      "src/assets/projects/proyecto-17/img3.jpg"
+      "src/assets/projects/proyecto-17/img1.jpg"
     ],
-    "scale": 2,
+    "scale": 1,
     "subtitle": "Desarrollo de videojuego Metroidvania",
-    "description": "Proyecto de videojuego con estética tarot y enfoque en combate tipo boss rush."
+    "description": "Proyecto de videojuego con estética tarot y enfoque en combate tipo boss rush. En desarrollo"
   },
   {
     "id": 18,
@@ -297,31 +169,14 @@
     "categories": [
       "ARQUITECTURA"
     ],
-    "cover": "src/assets/projects/proyecto-18/cover.jpg",
+    "cover": "src/assets/projects/proyecto-18/cover.png",
     "images": [
-      "src/assets/projects/proyecto-18/img1.jpg",
-      "src/assets/projects/proyecto-18/img2.jpg",
-      "src/assets/projects/proyecto-18/img3.jpg"
-    ],
-    "scale": 1,
-    "subtitle": "Documentación técnica de edificio público",
-    "description": "Levantamiento planimétrico completo del edificio de la Agrupación Nacional de Empleados Fiscales."
-  },
-  {
-    "id": 19,
-    "title": "Overlay TikTok",
-    "categories": [
-      "DISEÑO",
-      "DESARROLLO"
-    ],
-    "cover": "src/assets/projects/proyecto-19/cover.jpg",
-    "images": [
-      "src/assets/projects/proyecto-19/img1.jpg",
-      "src/assets/projects/proyecto-19/img2.jpg",
-      "src/assets/projects/proyecto-19/img3.jpg"
+      "src/assets/projects/proyecto-18/img1.png",
+      "src/assets/projects/proyecto-18/img2.png",
+      "src/assets/projects/proyecto-18/img3.png"
     ],
     "scale": 1.5,
-    "subtitle": "Interfaz interactiva para streaming",
-    "description": "Herramienta web que gestiona interacción en vivo mostrando y controlando usuarios en tiempo real."
+    "subtitle": "Documentación técnica de edificio público",
+    "description": "Levantamiento planimétrico completo del edificio de la Agrupación Nacional de Empleados Fiscales."
   }
 ]
