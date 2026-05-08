@@ -328,7 +328,10 @@ header {
     position: relative;
     left: 0;
     width: 320px;
-    height: 320px;
+    height: 480px;
+  }
+  .project-item{
+    scale:0.8;
   }
 }
 
