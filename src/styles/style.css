@@ -1260,3 +1260,84 @@ header {
   pointer-events: none;
   user-select: none;
 }
+
+/* ══════════════════════════════════════════════════════
+   MODO ZEN
+   ══════════════════════════════════════════════════════ */
+ 
+/* Botón zen — espejo del theme-toggle pero a la derecha */
+.zen-toggle {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  height: 44px;
+  padding: 0 16px;
+  background: var(--bg-glass);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-secondary);
+  border-radius: 22px;
+  cursor: pointer;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-primary);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+ 
+.zen-toggle:hover {
+  background: var(--bg-glass-hover);
+  border-color: var(--border-primary);
+  transform: scale(1.03);
+}
+ 
+.zen-toggle:active {
+  transform: scale(0.97);
+}
+ 
+.zen-toggle svg {
+  width: 14px;
+  height: 14px;
+  transition: opacity 0.3s;
+  flex-shrink: 0;
+}
+ 
+/* En modo zen el icono cambia */
+.zen-toggle .icon-zen   { display: block; }
+.zen-toggle .icon-exit  { display: none;  }
+ 
+body.zen-mode .zen-toggle .icon-zen  { display: none;  }
+body.zen-mode .zen-toggle .icon-exit { display: block; }
+body.zen-mode .zen-toggle {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+body.zen-mode:hover .zen-toggle,
+body.zen-mode .zen-toggle:focus {
+  opacity: 1;
+}
+ 
+/* Ocultar todo excepto partículas cuando zen-mode está activo */
+body.zen-mode .parent {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+ 
+/* El particle-container siempre queda visible */
+body.zen-mode #particle-container {
+  pointer-events: all;
+}
+ 
+@media (max-width: 768px) {
+  .zen-toggle {
+    bottom: 1rem;
+    right: 1rem;
+    height: 40px;
+    font-size: 9px;
+    padding: 0 12px;
+  }
+}
