@@ -50,8 +50,8 @@
   --shadow-particles: transparent;
   --btype:1;
   
-  --filter-grayscale: grayscale(100%) contrast(90%) brightness(150%) sepia(0.3) hue-rotate(180deg);
-  --filter-normal: grayscale(0%) saturate(30%) contrast(80%)  brightness(180%);
+  --filter-grayscale: grayscale(100%) contrast(90%) brightness(90%) sepia(0.3) hue-rotate(180deg);
+  --filter-normal: grayscale(0%) saturate(30%) contrast(80%)  brightness(100%);
 }
 
 
@@ -169,7 +169,7 @@ header {
 }
 @media (max-width: 768px) {
   header {
-    grid-area: 1 / 1 / 2 / 3;
+    grid-area: 1 / 1 / 2 / 4;
     padding: 2rem;
     margin-bottom: 20px;
     align-items: flex-start;
@@ -1053,4 +1053,210 @@ header {
   .cv-skill-name {
     font-size: 0.6rem;
   }
+}
+
+/* ══════════════════════════════════════════════════════
+   WELCOME OVERLAY
+   ══════════════════════════════════════════════════════ */
+
+#welcome-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary);
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: all;
+}
+
+#welcome-overlay.visible {
+  opacity: 1;
+}
+
+#welcome-overlay.dismissing {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.welcome-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+  padding: 0 40px;
+  max-width: 520px;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s 0.2s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.8s 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#welcome-overlay.visible .welcome-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.welcome-line {
+  width: 40px;
+  height: 1px;
+  background: var(--text-primary);
+  opacity: 0.3;
+}
+
+.welcome-text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.welcome-greeting {
+  font-size: clamp(42px, 8vw, 72px);
+  font-weight: 100;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.welcome-message {
+  font-size: clamp(14px, 2.5vw, 18px);
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  text-transform: uppercase;
+}
+
+.welcome-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: transparent;
+  border: 1px solid var(--border-primary);
+  color: var(--text-primary);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, gap 0.3s, border-color 0.3s;
+}
+
+.welcome-btn:hover {
+  background: var(--bg-glass-hover);
+  border-color: var(--border-primary);
+  gap: 22px;
+}
+
+.btn-arrow {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  flex-shrink: 0;
+}
+
+.welcome-btn:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+.welcome-hint {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--text-quaternary);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .welcome-content {
+    padding: 0 2rem;
+    gap: 20px;
+  }
+  .welcome-btn {
+    padding: 12px 22px;
+  }
+}
+
+/* ══════════════════════════════════════════════════════
+   HEADER — CONTACT INFO & SOCIAL BUTTONS
+   ══════════════════════════════════════════════════════ */
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+
+.btn-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  border: 1px solid var(--border-primary);
+  color: var(--text-primary);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 12px 22px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn-contact:hover {
+  background: var(--bg-glass-hover);
+}
+
+.btn-contact svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.btn-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid var(--border-primary);
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+  flex-shrink: 0;
+}
+
+.btn-social:hover {
+  background: var(--bg-glass-hover);
+  transform: scale(1.08);
+}
+
+.btn-social svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ══════════════════════════════════════════════════════
+   MAIN CONTENT — OCULTO HASTA CONTINUAR
+   ══════════════════════════════════════════════════════ */
+
+.main-hidden {
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
 }
