@@ -327,8 +327,8 @@ header {
   .gallery-grid {
     position: relative;
     left: 0;
-    width: 320px;
-    height: 320px;
+    width: 220px;
+    height: 220px;
   }
 }
 
