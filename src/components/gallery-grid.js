@@ -19,11 +19,16 @@ class GalleryGrid {
     this.init();
   }
 
+  isMobile() {
+    return window.innerWidth <= 768;
+  }
+
   async init() {
     await this.loadProjects();
     this.render();
     this.attachEventListeners();
     this.listenToFilterChanges();
+    if (this.isMobile()) this.listenToGridScroll();
   }
 
   async loadProjects() {
@@ -307,6 +312,21 @@ class GalleryGrid {
   getProjects() {
     return this.projects;
   }
+  listenToGridScroll() {
+  const container = document.getElementById(this.containerId);
+  if (!container) return;
+
+  const header = document.querySelector('header');
+  if (!header) return;
+
+  container.addEventListener('scroll', () => {
+    if (container.scrollTop > 10) {
+      header.classList.add('header-collapsed');
+    } else {
+      header.classList.remove('header-collapsed');
+    }
+  }, { passive: true });
+}
 }
 
 if (document.readyState === 'loading') {
