@@ -1,0 +1,84 @@
+{
+  "sobre": {
+    "nombre": "Lorenzo Fachinetti",
+    "rol": "Fullstack Developer · Arquitecto · Diseñador",
+    "bio": "Arquitecto de formación reconvertido al desarrollo de software. Me muevo entre el diseño espacial y el código con la misma lógica: entender sistemas, resolver problemas y construir cosas que funcionen bien y se vean mejor.\n\nTrabajo principalmente con el stack web moderno — desde la interfaz hasta el servidor — con especial interés en experiencias visuales interactivas y herramientas que hacen el trabajo más humano.",
+    "intereses": [
+      "Visualización de datos",
+      "3D en la web",
+      "Diseño generativo",
+      "Arquitectura digital",
+      "Open source",
+      "UX minimalista"
+    ],
+    "ubicacion": "Santiago, Chile — disponible para proyectos remotos."
+  },
+
+  "habilidades": [
+    {
+      "grupo": "Frontend",
+      "items": [
+        { "nombre": "HTML5 & CSS3",    "nivel": "Avanzado",    "pct": 85 },
+        { "nombre": "JavaScript",      "nivel": "Avanzado",    "pct": 82 },
+        { "nombre": "React.js",        "nivel": "Intermedio",  "pct": 62 },
+        { "nombre": "Three.js",        "nivel": "Intermedio",  "pct": 58 },
+        { "nombre": "Bootstrap",       "nivel": "Intermedio",  "pct": 60 },
+        { "nombre": "Material UI/UX",  "nivel": "Intermedio",  "pct": 58 }
+      ],
+      "chips": ["HTML5", "CSS3", "JavaScript", "React.js", "Three.js", "Bootstrap", "Material UI"]
+    },
+    {
+      "grupo": "Backend",
+      "items": [
+        { "nombre": "Node.js",         "nivel": "Intermedio",  "pct": 58 },
+        { "nombre": "Java",            "nivel": "Intermedio",  "pct": 60 },
+        { "nombre": "Spring Boot",     "nivel": "Intermedio",  "pct": 55 },
+        { "nombre": "MySQL",           "nivel": "Intermedio",  "pct": 60 },
+        { "nombre": "JPA",             "nivel": "Intermedio",  "pct": 52 }
+      ],
+      "chips": ["Node.js", "Java", "Spring Boot", "REST APIs", "MySQL", "JPA"]
+    },
+    {
+      "grupo": "Versionamiento & Herramientas",
+      "items": [
+        { "nombre": "Git / GitHub",    "nivel": "Intermedio",  "pct": 65 },
+        { "nombre": "VS Code",         "nivel": "Intermedio",  "pct": 70 },
+        { "nombre": "Scrum",           "nivel": "Intermedio",  "pct": 60 },
+        { "nombre": "Metodologías ágiles", "nivel": "Inicial", "pct": 35 }
+      ],
+      "chips": ["Git", "GitHub", "VS Code", "Scrum", "Agile"]
+    }
+  ],
+
+  "programas": [
+    {
+      "categoria": "Arquitectura",
+      "items": [
+        { "nombre": "AutoCAD",    "logo": "https://cdn.simpleicons.org/autodesk/888888" },
+        { "nombre": "Revit",      "logo": "https://cdn.simpleicons.org/autodesk/888888" },
+        { "nombre": "Rhinoceros", "logo": "https://cdn.simpleicons.org/rhinoceros/888888" },
+        { "nombre": "QGIS",       "logo": "https://cdn.simpleicons.org/qgis/888888" }
+      ]
+    },
+    {
+      "categoria": "Diseño",
+      "items": [
+        { "nombre": "Illustrator", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg" },
+        { "nombre": "Photoshop",   "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" },
+        { "nombre": "Premiere",    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-plain.svg" },
+        { "nombre": "Affinity",    "logo": "./src/assets/logos/affinity.svg" }
+      ]
+    },
+    {
+      "categoria": "Desarrollo",
+      "items": [
+        { "nombre": "VS Code",     "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
+        { "nombre": "GitHub",   "logo": "https://cdn.simpleicons.org/github/888888" },
+        { "nombre": "MySQL",    "logo": "https://cdn.simpleicons.org/mysql/888888" },
+        { "nombre": "Node.js",  "logo": "https://cdn.simpleicons.org/nodedotjs/888888" },
+        { "nombre": "React",    "logo": "https://cdn.simpleicons.org/react/888888" },
+        { "nombre": "Spring",   "logo": "https://cdn.simpleicons.org/spring/888888" }
+      ]
+    }
+  ]
+}

@@ -65,7 +65,7 @@ body {
   overflow: hidden;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background: var(--bg-primary);
-  transition: background-color 0.4s ease;
+  transition: background-color 0.8s ease;
 }
 
 .parent {
@@ -74,6 +74,8 @@ body {
   width: 100vw;
   grid-template-columns: 25% 7rem 1fr;
   grid-template-rows: 20% 1fr 40px;
+  opacity: 1;
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 @media (max-width: 768px) {
@@ -329,9 +331,6 @@ header {
     left: 0;
     width: 320px;
     height: 480px;
-  }
-  .project-item{
-    scale:0.8;
   }
 }
 
@@ -1074,17 +1073,12 @@ header {
   transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1);
   pointer-events: all;
 }
-
-#welcome-overlay.visible {
-  opacity: 1;
-}
-
+#welcome-overlay.visible { opacity: 1; }
 #welcome-overlay.dismissing {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1);
 }
-
 .welcome-content {
   display: flex;
   flex-direction: column;
@@ -1098,249 +1092,485 @@ header {
   transition: opacity 0.8s 0.2s cubic-bezier(0.22, 1, 0.36, 1),
               transform 0.8s 0.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
-
-#welcome-overlay.visible .welcome-content {
-  opacity: 1;
-  transform: translateY(0);
-}
-
+#welcome-overlay.visible .welcome-content { opacity: 1; transform: translateY(0); }
 .welcome-line {
-  width: 40px;
-  height: 1px;
-  background: var(--text-primary);
-  opacity: 0.3;
+  width: 40px; height: 1px;
+  background: var(--text-primary); opacity: 0.3;
 }
-
-.welcome-text-block {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
+.welcome-text-block { display: flex; flex-direction: column; gap: 12px; }
 .welcome-greeting {
   font-size: clamp(42px, 8vw, 72px);
-  font-weight: 100;
-  letter-spacing: 0.05em;
-  color: var(--text-primary);
-  line-height: 1;
+  font-weight: 100; letter-spacing: 0.05em;
+  color: var(--text-primary); line-height: 1;
 }
-
 .welcome-message {
   font-size: clamp(14px, 2.5vw, 18px);
-  font-weight: 300;
-  letter-spacing: 0.08em;
-  color: var(--text-secondary);
-  line-height: 1.7;
-  text-transform: uppercase;
+  font-weight: 300; letter-spacing: 0.08em;
+  color: var(--text-secondary); line-height: 1.7; text-transform: uppercase;
 }
-
 .welcome-btn {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  background: transparent;
-  border: 1px solid var(--border-primary);
-  color: var(--text-primary);
-  font-size: 11px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  padding: 14px 28px;
-  cursor: pointer;
-  transition: background 0.3s, color 0.3s, gap 0.3s, border-color 0.3s;
+  display: flex; align-items: center; gap: 14px;
+  background: transparent; border: 1px solid var(--border-primary);
+  color: var(--text-primary); font-size: 11px;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  padding: 14px 28px; cursor: pointer;
+  transition: background 0.3s, gap 0.3s;
 }
-
-.welcome-btn:hover {
-  background: var(--bg-glass-hover);
-  border-color: var(--border-primary);
-  gap: 22px;
-}
-
+.welcome-btn:hover { background: var(--bg-glass-hover); gap: 22px; }
 .btn-arrow {
-  width: 16px;
-  height: 16px;
-  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-  flex-shrink: 0;
+  width: 16px; height: 16px;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1); flex-shrink: 0;
 }
-
-.welcome-btn:hover .btn-arrow {
-  transform: translateX(4px);
-}
-
+.welcome-btn:hover .btn-arrow { transform: translateX(4px); }
 .welcome-hint {
-  font-size: 10px;
-  letter-spacing: 0.15em;
-  color: var(--text-quaternary);
-  text-transform: uppercase;
-  margin: 0;
+  font-size: 10px; letter-spacing: 0.15em;
+  color: var(--text-quaternary); text-transform: uppercase; margin: 0;
 }
-
 @media (max-width: 768px) {
-  .welcome-content {
-    padding: 0 2rem;
-    gap: 20px;
-  }
-  .welcome-btn {
-    padding: 12px 22px;
-  }
+  .welcome-content { padding: 0 2rem; gap: 20px; }
+  .welcome-btn { padding: 12px 22px; }
 }
 
 /* ══════════════════════════════════════════════════════
    HEADER — CONTACT INFO & SOCIAL BUTTONS
    ══════════════════════════════════════════════════════ */
 
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
+.contact-info { display: flex; flex-direction: column; gap: 2px; }
 
 .header-actions {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 20px;
-  flex-wrap: wrap;
+  display: flex; align-items: center;
+  gap: 12px; margin-top: 20px; flex-wrap: wrap;
 }
-
-
 .btn-contact {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: transparent;
-  border: 1px solid var(--border-primary);
-  color: var(--text-primary);
-  font-size: 10px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  padding: 12px 22px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background 0.3s, color 0.3s;
+  display: inline-flex; align-items: center; gap: 10px;
+  background: transparent; border: 1px solid var(--border-primary);
+  color: var(--text-primary); font-size: 10px;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  padding: 12px 22px; cursor: pointer; text-decoration: none;
+  transition: background 0.3s;
 }
-
-.btn-contact:hover {
-  background: var(--bg-glass-hover);
-}
-
-.btn-contact svg {
-  width: 14px;
-  height: 14px;
-  flex-shrink: 0;
-}
-
+.btn-contact:hover { background: var(--bg-glass-hover); }
+.btn-contact svg { width: 14px; height: 14px; flex-shrink: 0; }
 .btn-social {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: transparent;
-  border: 1px solid var(--border-primary);
-  color: var(--text-primary);
-  text-decoration: none;
-  transition: background 0.3s, color 0.3s, transform 0.3s;
-  flex-shrink: 0;
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 42px; height: 42px; border-radius: 50%;
+  background: transparent; border: 1px solid var(--border-primary);
+  color: var(--text-primary); text-decoration: none;
+  transition: background 0.3s, transform 0.3s; flex-shrink: 0;
 }
-
-.btn-social:hover {
-  background: var(--bg-glass-hover);
-  transform: scale(1.08);
-}
-
-.btn-social svg {
-  width: 16px;
-  height: 16px;
-}
+.btn-social:hover { background: var(--bg-glass-hover); transform: scale(1.08); }
+.btn-social svg { width: 16px; height: 16px; }
 
 /* ══════════════════════════════════════════════════════
    MAIN CONTENT — OCULTO HASTA CONTINUAR
    ══════════════════════════════════════════════════════ */
 
 .main-hidden {
-  opacity: 0;
-  pointer-events: none;
-  user-select: none;
+  opacity: 0; pointer-events: none; user-select: none;
 }
+.panel-hidden { opacity: 0 !important; pointer-events: none !important; }
+ 
 
 /* ══════════════════════════════════════════════════════
    MODO ZEN
    ══════════════════════════════════════════════════════ */
- 
-/* Botón zen — espejo del theme-toggle pero a la derecha */
+
 .zen-toggle {
+  position: fixed; bottom: 1rem; right: 1rem;
+  height: 44px; padding: 0 16px;
+  background: var(--bg-glass); backdrop-filter: blur(10px);
+  border: 1px solid var(--border-secondary); border-radius: 22px;
+  cursor: pointer; z-index: 900;
+  display: flex; align-items: center; gap: 8px;
+  color: var(--text-primary); font-size: 10px;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+.zen-toggle:hover { background: var(--bg-glass-hover); border-color: var(--border-primary); transform: scale(1.03); }
+.zen-toggle:active { transform: scale(0.97); }
+.zen-toggle svg { width: 14px; height: 14px; flex-shrink: 0; }
+.zen-toggle .icon-zen  { display: block; }
+.zen-toggle .icon-exit { display: none;  }
+body.zen-mode .zen-toggle .icon-zen  { display: none;  }
+body.zen-mode .zen-toggle .icon-exit { display: block; }
+body.zen-mode .zen-toggle { opacity: 0; transition: opacity 0.4s ease; }
+body.zen-mode:hover .zen-toggle { opacity: 1; }
+body.zen-mode .parent { opacity: 0; pointer-events: none; transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
+body.zen-mode #particle-container { pointer-events: all; }
+body.zen-mode .profile-nav { opacity: 0; pointer-events: none; }
+
+@media (max-width: 768px) {
+  .zen-toggle { height: 40px; font-size: 9px; padding: 0 12px; }
+}
+
+/* ══════════════════════════════════════════════════════
+   PROFILE NAV
+   ══════════════════════════════════════════════════════ */
+
+.profile-nav {
   position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  height: 44px;
-  padding: 0 16px;
-  background: var(--bg-glass);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--border-secondary);
-  border-radius: 22px;
-  cursor: pointer;
-  z-index: 900;
+  top: 20px;
+  left: 0;
+  right: 0;
+  z-index: 800;
   display: flex;
   align-items: center;
-  gap: 8px;
-  color: var(--text-primary);
+  justify-content: right;
+  padding: 0 2rem;
+  height: 48px;
+  background: transparent;
+  transition: opacity 0.4s ease;
+  pointer-events: none; /* solo los botones capturan eventos */
+}
+
+.profile-nav-inner {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--border-secondary);
+  border-radius: 24px;
+  padding: 4px 6px;
+  pointer-events: all;
+}
+
+.profile-nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: transparent;
+  border: none;
+  color: var(--text-tertiary);
   font-size: 10px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  transition: all 0.3s ease;
+  padding: 7px 16px;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s;
+  white-space: nowrap;
 }
- 
-.zen-toggle:hover {
+.profile-nav-btn svg { width: 13px; height: 13px; flex-shrink: 0; }
+.profile-nav-btn:hover { background: var(--bg-glass-hover); color: var(--text-primary); }
+.profile-nav-btn.active {
   background: var(--bg-glass-hover);
-  border-color: var(--border-primary);
-  transform: scale(1.03);
+  color: var(--text-primary);
 }
- 
-.zen-toggle:active {
-  transform: scale(0.97);
+
+/* ── Panel lateral del perfil ────────────────────────── */
+
+.profile-panel {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: max(768px, 30vw);
+  z-index: 810;
+  background: var(--bg-primary);
+  border-right: 1px solid var(--border-secondary);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-100%);
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  overflow: hidden;
 }
- 
-.zen-toggle svg {
-  width: 14px;
-  height: 14px;
-  transition: opacity 0.3s;
+@media (max-width: 768px) {
+  .profile-panel{
+    width: max(50%, 95vw);
+  }
+}
+
+.profile-panel.open {
+  transform: translateX(0);
+}
+
+/* Cabecera del panel */
+.profile-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 28px 16px;
+  border-bottom: 1px solid var(--border-secondary);
   flex-shrink: 0;
 }
- 
-/* En modo zen el icono cambia */
-.zen-toggle .icon-zen   { display: block; }
-.zen-toggle .icon-exit  { display: none;  }
- 
-body.zen-mode .zen-toggle .icon-zen  { display: none;  }
-body.zen-mode .zen-toggle .icon-exit { display: block; }
-body.zen-mode .zen-toggle {
-  opacity: 0;
-  transition: opacity 0.4s ease;
+
+.profile-panel-title {
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-quaternary);
 }
-body.zen-mode:hover .zen-toggle,
-body.zen-mode .zen-toggle:focus {
-  opacity: 1;
+
+.profile-panel-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid var(--border-secondary);
+  color: var(--text-tertiary);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.profile-panel-close:hover {
+  background: var(--bg-glass-hover);
+  color: var(--text-primary);
+}
+.profile-panel-close svg { width: 14px; height: 14px; }
+
+/* Scroll interior */
+.profile-panel-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 32px max(28px, 20%) 48px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-primary) transparent;
+}
+.profile-panel-body::-webkit-scrollbar { width: 4px; }
+.profile-panel-body::-webkit-scrollbar-track { background: transparent; }
+.profile-panel-body::-webkit-scrollbar-thumb {
+  background: var(--border-primary);
+  border-radius: 2px;
+}
+
+/* Secciones dentro del panel */
+.profile-section {
+  display: none;
+  flex-direction: column;
+  gap: 32px;
+  animation: fadeSlideIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.profile-section.active { display: flex; }
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Sobre mí ───────────────────────────────────────── */
+
+.profile-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 1px solid var(--border-primary);
+  background: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  flex-shrink: 0;
+  color: var(--text-quaternary);
+}
+
+.profile-bio-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-bio-meta { display: flex; flex-direction: column; gap: 4px; }
+
+.profile-bio-name {
+  font-size: 1.1rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+}
+
+.profile-bio-role {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-quaternary);
+}
+
+.profile-block-label {
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-quaternary);
+  margin-bottom: 10px;
+}
+
+.profile-bio-text {
+  font-size: 0.85rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.profile-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.profile-tag {
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  border: 1px solid var(--border-secondary);
+  padding: 5px 12px;
+  border-radius: 12px;
+}
+
+/* ── Habilidades ────────────────────────────────────── */
+
+.skill-group { display: flex; flex-direction: column; gap: 14px; }
+
+.skill-group-label {
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-quaternary);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-secondary);
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skill-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-name {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: var(--text-primary);
+  letter-spacing: 0.04em;
+}
+
+.skill-level {
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--text-quaternary);
+  text-transform: uppercase;
+}
+
+.skill-bar {
+  height: 2px;
+  background: var(--border-secondary);
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  background: var(--text-tertiary);
+  border-radius: 1px;
+  width: 0;
+  transition: width 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.skill-bar-fill.animated { width: var(--w); }
+
+/* Chips de tecnologías */
+.skill-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.skill-chip {
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-secondary);
+  padding: 5px 12px;
+  border-radius: 4px;
+  transition: border-color 0.2s, color 0.2s;
+}
+.skill-chip:hover {
+  border-color: var(--border-primary);
+  color: var(--text-primary);
+}
+
+/* Divisor interior */
+.profile-divider {
+  height: 1px;
+  background: var(--border-secondary);
+  border: none;
+  margin: 0;
+}
+/* ── Programas ──────────────────────────────────────── */
+ 
+.prog-section { display: flex; flex-direction: column; gap: 24px; }
+ 
+.prog-category { display: flex; flex-direction: column; gap: 12px; }
+ 
+.prog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+  gap: 10px;
 }
  
-/* Ocultar todo excepto partículas cuando zen-mode está activo */
-body.zen-mode .parent {
+.prog-item {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 6px;
+  padding: 12px 8px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-secondary);
+  border-radius: 6px;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+  cursor: default;
+}
+.prog-item:hover {
+  background: var(--bg-glass-hover);
+  border-color: var(--border-primary);
+  transform: translateY(-2px);
+}
+ 
+.prog-logo {
+  width: 28px; height: 28px;
+  object-fit: contain;
+  filter: var(--filter-grayscale);
+  transition: filter 0.3s;
+}
+.prog-item:hover .prog-logo { filter: var(--filter-normal); }
+ 
+.prog-name {
+  font-size: 8px; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--text-quaternary);
+  text-align: center; line-height: 1.2;
+}
+ 
+/* ── Overlay de fondo al abrir panel ─────────────────── */
+
+.profile-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 805;
+  background: var(--overlay-bg);
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: opacity 0.45s ease;
 }
- 
-/* El particle-container siempre queda visible */
-body.zen-mode #particle-container {
+.profile-backdrop.visible {
+  opacity: 0.45;
   pointer-events: all;
 }
- 
+
+/* En modo zen ocultar nav */
+body.zen-mode .profile-nav { opacity: 0; pointer-events: none; }
+
 @media (max-width: 768px) {
-  .zen-toggle {
-    bottom: 1rem;
-    right: 1rem;
-    height: 40px;
-    font-size: 9px;
-    padding: 0 12px;
-  }
+  .profile-nav { padding: 0 1rem; }
+  .profile-panel-body { padding: 24px 20% 40px; }
+  .profile-panel-header { padding: 16px 20px 14px; }
 }
