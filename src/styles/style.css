@@ -81,19 +81,16 @@ body {
 
 @media (max-width: 768px) {
   body {
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow: hidden;
   }
   .parent {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: auto;
-    min-height: 100vh;
+    height: 100vh;
     width: 100vw;
-    overflow-y: visible;
-    overflow-x: hidden;
-    padding-bottom: 100px;
+    overflow: hidden;
+    padding-bottom: 0;
   }
 }
 
@@ -324,7 +321,7 @@ header {
   .filter-btn {
     writing-mode: horizontal-tb !important;
     text-orientation: mixed !important;
-    font-size: 0.65rem !important;
+    font-size: 0.8rem !important;
     letter-spacing: 0.12em;
     padding: 6px 12px;
     border-radius: 16px;
@@ -385,12 +382,21 @@ header {
   .grid-container {
     grid-area: unset;
     width: 100%;
-    padding: 0 12px;
+    flex: 1;
+    min-height: 0;          
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0 12px 80px;
     margin: 0;
     align-items: flex-start;
     justify-content: flex-start;
     pointer-events: all;
     opacity: 1;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .grid-container::-webkit-scrollbar {
+    display: none;
   }
   .grid-container.panel-open {
     margin-right: 0;
@@ -412,16 +418,16 @@ header {
     gap: 10px;
     width: 100%;
     height: auto;
-    padding: 4px;
+    padding: 4px 4px 20px;
+    justify-items: center;
   }
-  /* En móvil, los project-item son estáticos en grid, sin física */
   .gallery-grid .project-item {
     position: relative !important;
     left: auto !important;
     top: auto !important;
-    width: 100% !important;
+    width: 80% !important;
     height: 0 !important;
-    padding-bottom: 100% !important;
+    padding-bottom: 80% !important;
     animation: none !important;
     opacity: 1;
     transform: none !important;
@@ -1279,10 +1285,6 @@ body.zen-mode .profile-nav { opacity: 0; pointer-events: none; }
   border-radius: 4px;
   transition: border-color 0.2s, color 0.2s;
 }
-.skill-chip:hover {
-  border-color: var(--border-primary);
-  color: var(--text-primary);
-}
 
 /* Divisor interior */
 .profile-divider {
@@ -1312,11 +1314,6 @@ body.zen-mode .profile-nav { opacity: 0; pointer-events: none; }
   border-radius: 6px;
   transition: border-color 0.2s, background 0.2s, transform 0.2s;
   cursor: default;
-}
-.prog-item:hover {
-  background: var(--bg-glass-hover);
-  border-color: var(--border-primary);
-  transform: translateY(-2px);
 }
  
 .prog-logo {

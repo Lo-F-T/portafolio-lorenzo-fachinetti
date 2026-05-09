@@ -1,20 +1,43 @@
 {
   "sobre": {
     "nombre": "Lorenzo Fachinetti",
-    "rol": "Fullstack Developer · Arquitecto · Diseñador",
-    "bio": "Arquitecto de formación reconvertido al desarrollo de software. Me muevo entre el diseño espacial y el código con la misma lógica: entender sistemas, resolver problemas y construir cosas que funcionen bien y se vean mejor.\n\nTrabajo principalmente con el stack web moderno — desde la interfaz hasta el servidor — con especial interés en experiencias visuales interactivas y herramientas que hacen el trabajo más humano.",
+    "rol": "Arquitecto · Diseñador · Desarrollador",
+    "bio": "Arquitecto con perfil híbrido entre diseño, tecnología y experiencia digital. Trabajo con herramientas como Revit, Rhino y software gráfico para desarrollar proyectos que combinan pensamiento espacial, visual y estratégico.\n\n Me interesa moverme en la intersección entre arquitectura, UX/UI y diseño digital, explorando nuevas formas de crear y comunicar proyectos. Busco integrarme a equipos donde el diseño no sea solo forma, sino también sistema y experiencia.",
     "intereses": [
       "Visualización de datos",
-      "3D en la web",
+      "Biomateriales",
       "Diseño generativo",
-      "Arquitectura digital",
-      "Open source",
-      "UX minimalista"
+      "Arquitectura parametrica",
+      "Soluciones Basadas en la Naturaleza (SBN)",
+      "UX / UI",
+      "Urbanismo Biotecnologico"
     ],
     "ubicacion": "Santiago, Chile — disponible para proyectos remotos."
   },
 
   "habilidades": [
+    {
+      "grupo": "Arquitectura",
+      "items": [
+        { "nombre": "Rhinoceros / Grasshopper", "nivel": "Avanzado",    "pct": 80 },
+        { "nombre": "AutoCAD",                  "nivel": "Avanzado",    "pct": 78 },
+        { "nombre": "Revit",                    "nivel": "Intermedio",  "pct": 60 },
+        { "nombre": "QGIS",                     "nivel": "Intermedio",  "pct": 55 }
+      ],
+      "chips": ["Rhinoceros", "Grasshopper", "AutoCAD", "Revit", "QGIS", "BIM"]
+    },
+    {
+      "grupo": "Diseño & Multimedia",
+      "items": [
+        { "nombre": "Adobe Illustrator",  "nivel": "Avanzado",    "pct": 78 },
+        { "nombre": "Adobe Photoshop",    "nivel": "Avanzado",    "pct": 75 },
+        { "nombre": "Adobe Premiere",     "nivel": "Intermedio",  "pct": 62 },
+        { "nombre": "DaVinci Resolve",    "nivel": "Intermedio",  "pct": 55 },
+        { "nombre": "Blender",            "nivel": "Básico",      "pct": 45 },
+        { "nombre": "Affinity Suite",     "nivel": "Intermedio",  "pct": 60 }
+      ],
+      "chips": ["Illustrator", "Photoshop", "Premiere", "DaVinci Resolve", "Blender", "Affinity", "After Effects"]
+    },
     {
       "grupo": "Frontend",
       "items": [
