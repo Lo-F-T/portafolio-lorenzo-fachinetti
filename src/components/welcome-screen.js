@@ -35,7 +35,7 @@ class WelcomeScreen {
       <div class="welcome-content">
         <div class="welcome-line"></div>
         <div class="welcome-text-block">
-          <span class="welcome-greeting">Hola,</span>
+          <span class="welcome-greeting">Hola!,</span>
           <span class="welcome-message">estás a punto de conocer<br>un poco de mi trabajo.</span>
         </div>
         <div class="welcome-line"></div>
