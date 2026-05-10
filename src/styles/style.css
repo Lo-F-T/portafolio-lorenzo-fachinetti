@@ -317,7 +317,7 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
     height: auto !important;
     width: auto;
     padding: 5px 8px;
