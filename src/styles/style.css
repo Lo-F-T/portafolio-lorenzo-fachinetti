@@ -335,7 +335,7 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 4px;
+    gap: 20px;
     height: auto !important;
     width: auto;
     padding: 5px 8px;
@@ -348,7 +348,7 @@ header {
   .filter-btn {
     writing-mode: horizontal-tb !important;
     text-orientation: mixed !important;
-    font-size: 0.8rem !important;
+    font-size: 1rem !important;
     letter-spacing: 0.12em;
     padding: 6px 12px;
     border-radius: 16px;
