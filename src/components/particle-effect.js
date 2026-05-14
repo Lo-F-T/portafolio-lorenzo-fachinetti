@@ -202,7 +202,11 @@ document.addEventListener('touchmove', (e) => {
 }, { passive: true });
 
 document.addEventListener('touchend', () => {
-});
+  mouse.prevX = mouse.x;
+  mouse.prevY = mouse.y;
+  mouse.x = -9999;
+  mouse.y = -9999;
+}, { passive: true });
 
 window.addEventListener('resize', () => {
   camera.aspect = window.innerWidth / window.innerHeight; 
