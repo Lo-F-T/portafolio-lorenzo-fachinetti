@@ -191,7 +191,11 @@ window.addEventListener('mousemove', (e) => {
 // Eventos táctiles (móvil y tablets) - capturados en el documento completo
 document.addEventListener('touchstart', (e) => {
   if (e.touches.length > 0) {
-    updateMousePosition(e.touches[0].clientX, e.touches[0].clientY);
+    // Inicializar prev con la misma posición para que mVelX/mVelY = 0
+    mouse.prevX = (e.touches[0].clientX / window.innerWidth) * 2 - 1;
+    mouse.prevY = -(e.touches[0].clientY / window.innerHeight) * 2 + 1;
+    mouse.x = mouse.prevX;
+    mouse.y = mouse.prevY;
   }
 }, { passive: true });
 
